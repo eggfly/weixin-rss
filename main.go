@@ -43,4 +43,8 @@ func chanHandler(feed *rss.Feed, newchannels []*rss.Channel) {
 
 func itemHandler(feed *rss.Feed, ch *rss.Channel, newitems []*rss.Item) {
 	fmt.Printf("%d new item(s) in %s\n", len(newitems), feed.Url)
+	for _, item := range newitems[:2] {
+		fmt.Println(item)
+		fmt.Println()
+	}
 }
